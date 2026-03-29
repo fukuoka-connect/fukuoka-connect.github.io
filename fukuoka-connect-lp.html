@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUKUOKA CONNECT｜AIで最短即日・売れるLP制作サービス</title>
+  <meta name="description" content="AIを活用し最短即日で高品質なLP（ランディングページ）を制作。SEO対策・GA4アクセス解析レポートのLINE毎日配信つき。福岡の中小企業・個人事業主を加速させるLP制作代行サービス。">
+  <meta name="keywords" content="LP制作,ランディングページ,ホームページ,ウェブサイト,福岡,AI,即日,SEO対策,集客">
+  <link rel="canonical" href="https://fukuoka-connect.github.io/">
+  <meta property="og:title" content="FUKUOKA CONNECT｜AIで最短即日・売れるLP制作">
+  <meta property="og:description" content="最短即日、通常の半額以下。AIで設計する「売れる」LP制作サービス。SEOとGA4レポートも込み。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fukuoka-connect.github.io/">
+  <meta property="og:image" content="https://fukuoka-connect.github.io/ogp.jpg">
+  <meta property="og:site_name" content="FUKUOKA CONNECT">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FUKUOKA CONNECT｜AIで最短即日・売れるLP制作">
+  <meta name="twitter:description" content="最短即日、通常の半額以下。SEO込み・LINEレポートつきのLP制作代行。">
+  <meta name="twitter:image" content="https://fukuoka-connect.github.io/ogp.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"FUKUOKA CONNECT","description":"AIを活用した高品質LP制作代行サービス。最短即日納品、SEO対策・GA4レポート込み。","url":"https://fukuoka-connect.github.io/","areaServed":"福岡県","serviceType":"ランディングページ制作・Webマーケティング支援"}</script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+    :root{
+      /* ── Cream palette ── */
+      --cr:   #f5f0e8;   /* メインクリーム */
+      --cr2:  #faf8f3;   /* 明るいクリーム */
+      --cr3:  #ede7d9;   /* 濃いクリーム */
+      --cr4:  #e0d8c8;   /* ボーダー */
+      --navy: #1a2744;   /* アクセント・ネイビー */
+      --navy2:#243360;
+      --tx:   #2c1f0e;   /* メインテキスト */
+      --mu:   #7a6a54;   /* ミュート */
+      --mu2:  #a09078;   /* ライトミュート */
+      --wh:   #ffffff;
+      /* ── Hover (smooth / elegant) ── */
+      --on:  .22s;
+      --off: .48s;
+      --ease:cubic-bezier(.25,.46,.45,.94);
+    }
+
+    html{scroll-behavior:smooth}
+    body{font-family:'Noto Sans JP',sans-serif;background:var(--cr2);color:var(--tx);line-height:1.7;overflow-x:hidden}
+
+    h1,h2,h3{font-family:'Shippori Mincho',serif;line-height:1.2}
+    .en{font-family:'Bebas Neue',sans-serif}
+    .sm{font-size:.78em}
+
+    /* フチオビ */
+    .fuchi{display:inline-block;border:2px solid var(--navy);background:transparent;color:var(--navy);padding:3px 16px;line-height:1.4}
+    .fuchi-wh{display:inline-block;border:2px solid var(--wh);background:transparent;color:var(--wh);padding:3px 16px;line-height:1.4}
+
+    /* マーカー */
+    .marker{background:linear-gradient(transparent 58%,rgba(26,39,68,.12) 58%)}
+
+    /* ──────────── HEADER ──────────── */
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:200;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0 48px;height:64px;
+      background:rgba(245,240,232,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--cr4);
+      transition:background var(--off) var(--ease);
+    }
+    .logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.1em;color:var(--navy);text-decoration:none}
+    .logo span{color:var(--mu)}
+    nav{display:flex;gap:36px}
+    nav a{font-size:.78rem;color:var(--mu);text-decoration:none;letter-spacing:.08em;position:relative;padding-bottom:2px;transition:color var(--on) var(--ease)}
+    nav a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--navy);transition:width var(--on) var(--ease)}
+    nav a:hover{color:var(--navy)}
+    nav a:hover::after{width:100%;transition:width var(--off) var(--ease)}
+    .hcta{
+      border:1px solid var(--navy);color:var(--navy);
+      padding:9px 22px;font-size:.8rem;font-weight:700;
+      text-decoration:none;letter-spacing:.06em;
+      transition:background var(--on) var(--ease),color var(--on) var(--ease);
+    }
+    .hcta:hover{background:var(--navy);color:var(--cr2);transition:background var(--off) var(--ease),color var(--off) var(--ease)}
+
+    /* ──────────── HERO ──────────── */
+    #hero{
+      min-height:100vh;display:flex;align-items:center;
+      position:relative;overflow:hidden;
+      padding:130px 48px 90px;
+      background:var(--cr);
+    }
+    /* 薄いグリッド装飾 */
+    .hgrid{
+      position:absolute;inset:0;
+      background-image:linear-gradient(var(--cr4) 1px,transparent 1px),linear-gradient(90deg,var(--cr4) 1px,transparent 1px);
+      background-size:64px 64px;
+      opacity:.4;
+    }
+    /* 右下の大きな円装飾 */
+    .hcircle{
+      position:absolute;right:-120px;bottom:-120px;
+      width:520px;height:520px;
+      border-radius:50%;
+      border:1px solid var(--cr4);
+      opacity:.6;
+    }
+    .hcircle2{
+      position:absolute;right:-60px;bottom:-60px;
+      width:340px;height:340px;
+      border-radius:50%;
+      border:1px solid var(--cr3);
+      opacity:.8;
+    }
+    .hi{position:relative;max-width:1100px;margin:0 auto;width:100%}
+
+    .heb{display:flex;align-items:center;gap:14px;margin-bottom:28px;opacity:0;animation:fu .7s var(--ease) .2s forwards}
+    .hebl{width:36px;height:1px;background:var(--navy)}
+    .heb span{font-family:'Bebas Neue',sans-serif;font-size:.78rem;letter-spacing:.22em;color:var(--navy)}
+
+    h1{font-size:clamp(2.8rem,7vw,6rem);font-weight:800;line-height:1.05;color:var(--tx);opacity:0;animation:fu .8s var(--ease) .35s forwards}
+    .h1line2{display:block;margin-top:8px;opacity:0;animation:fu .8s var(--ease) .5s forwards}
+    /* h1内フチオビ */
+    .h1fuchi{
+      display:inline-block;
+      border:3px solid var(--navy);
+      color:var(--navy);
+      padding:4px 20px;
+      font-size:clamp(2.8rem,7vw,6rem);
+      font-family:'Shippori Mincho',serif;
+      font-weight:800;line-height:1.1;
+    }
+    .h1rest{font-size:clamp(2.8rem,7vw,6rem);font-family:'Shippori Mincho',serif;font-weight:800;color:var(--tx)}
+
+    .hsub{font-size:clamp(.95rem,1.8vw,1.2rem);color:var(--mu);max-width:520px;margin:32px 0 48px;line-height:1.9;opacity:0;animation:fu .8s var(--ease) .65s forwards}
+
+    .hstats{display:flex;gap:0;margin-bottom:56px;opacity:0;animation:fu .8s var(--ease) .8s forwards}
+    .hstat{padding:0 40px 0 0;margin-right:40px;border-right:1px solid var(--cr4)}
+    .hstat:last-child{border-right:none}
+    .hstat-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--navy);line-height:1}
+    .hstat-num sup{font-size:1.1rem}
+    .hstat-label{font-size:.72rem;color:var(--mu);margin-top:4px;letter-spacing:.04em}
+
+    .hctas{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fu .8s var(--ease) .95s forwards}
+    .btnp{
+      display:inline-flex;align-items:center;gap:10px;
+      background:var(--navy);color:var(--cr2);
+      padding:18px 42px;font-size:1rem;font-weight:700;
+      text-decoration:none;letter-spacing:.05em;
+      position:relative;overflow:hidden;
+      transition:transform var(--on) var(--ease),box-shadow var(--on) var(--ease);
+    }
+    .btnp::before{content:'';position:absolute;inset:0;background:var(--navy2);transform:translateX(-100%);transition:transform var(--on) var(--ease)}
+    .btnp:hover::before{transform:translateX(0);transition:transform var(--off) var(--ease)}
+    .btnp:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,39,68,.2);transition:transform var(--off) var(--ease),box-shadow var(--off) var(--ease)}
+    .btnp span{position:relative;z-index:1}
+    .btng{
+      display:inline-flex;align-items:center;gap:8px;
+      border:1px solid var(--cr4);color:var(--mu);
+      padding:18px 32px;font-size:1rem;
+      text-decoration:none;letter-spacing:.04em;
+      transition:border-color var(--on) var(--ease),color var(--on) var(--ease);
+    }
+    .btng:hover{border-color:var(--navy);color:var(--navy);transition:border-color var(--off) var(--ease),color var(--off) var(--ease)}
+
+    /* ──────────── TICKER ──────────── */
+    .tw{overflow:hidden;background:var(--navy);padding:11px 0}
+    .tk{display:flex;animation:tk 22s linear infinite;width:max-content}
+    .ti{white-space:nowrap;font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:rgba(245,240,232,.8);padding:0 36px;letter-spacing:.16em}
+
+    /* ──────────── SECTIONS BASE ──────────── */
+    section{padding:100px 48px}
+    .si2{max-width:1100px;margin:0 auto}
+    .slabel{display:inline-flex;align-items:center;gap:10px;font-family:'Bebas Neue',sans-serif;font-size:.78rem;letter-spacing:.22em;color:var(--navy);margin-bottom:18px}
+    .slabel::before{content:'';width:20px;height:1px;background:var(--navy)}
+    .sh2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:700;line-height:1.2;margin-bottom:16px;color:var(--tx)}
+
+    /* ──────────── PAIN ──────────── */
+    #pain{background:var(--cr3)}
+    .pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;margin-top:56px;border:1px solid var(--cr4)}
+    .pc{
+      background:var(--cr2);padding:36px 30px;
+      position:relative;overflow:hidden;
+      border-right:1px solid var(--cr4);
+      transition:background var(--on) var(--ease),transform var(--on) var(--ease);
+    }
+    .pc:last-child{border-right:none}
+    .pc::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--navy);transition:width var(--on) var(--ease)}
+    .pc:hover{background:var(--cr);transform:translateY(-2px);transition:background var(--off) var(--ease),transform var(--off) var(--ease)}
+    .pc:hover::after{width:100%;transition:width var(--off) var(--ease)}
+    .pn{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:var(--cr4);line-height:1;margin-bottom:14px}
+    .pc h3{font-size:1.05rem;font-weight:700;margin-bottom:10px;line-height:1.45;color:var(--tx);font-family:'Shippori Mincho',serif}
+    .pc p{font-size:.88rem;color:var(--mu);line-height:1.75}
+
+    /* ──────────── SOLUTION ──────────── */
+    #solution{background:var(--cr2)}
+    .slead{font-size:clamp(1rem,2.2vw,1.3rem);color:var(--mu);max-width:680px;margin-bottom:72px;line-height:1.9}
+    .slead strong{color:var(--tx)}
+    .sf{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--cr4)}
+    .fc{
+      background:var(--cr);padding:48px 36px;
+      border-right:1px solid var(--cr4);
+      transition:background var(--on) var(--ease);
+    }
+    .fc:last-child{border-right:none}
+    .fc:hover{background:var(--cr3);transition:background var(--off) var(--ease)}
+    .fi{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:var(--cr4);line-height:1;margin-bottom:18px}
+    .fc h3{font-size:1.35rem;font-weight:700;margin-bottom:12px;color:var(--tx);font-family:'Shippori Mincho',serif}
+    .fc p{font-size:.88rem;color:var(--mu);line-height:1.75}
+    .ft{display:inline-block;margin-top:20px;font-size:.7rem;letter-spacing:.1em;border:1px solid var(--cr4);color:var(--mu2);padding:4px 12px}
+
+    /* ──────────── STRENGTH ──────────── */
+    #strength{background:var(--cr3)}
+    .stl{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start;margin-top:60px}
+    .stv{position:relative}
+    .stbn{font-family:'Bebas Neue',sans-serif;font-size:9rem;line-height:.85;color:var(--cr4)}
+    /* フチオビバッジ */
+    .stbadge{position:absolute;bottom:-20px;right:0;border:2px solid var(--navy);background:var(--cr2);color:var(--navy);padding:14px 20px;font-weight:700;font-size:.85rem;line-height:1.6;max-width:210px}
+    .stlist{display:flex;flex-direction:column;gap:1px}
+    .stitem{
+      background:var(--cr2);border:1px solid var(--cr4);
+      padding:26px 28px;display:flex;gap:20px;align-items:flex-start;
+      transition:border-color var(--on) var(--ease),transform var(--on) var(--ease),background var(--on) var(--ease);
+    }
+    .stitem:hover{border-color:var(--navy);transform:translateX(5px);background:var(--cr);transition:border-color var(--off) var(--ease),transform var(--off) var(--ease),background var(--off) var(--ease)}
+    .sticon{width:40px;height:40px;border:1px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:var(--navy);font-family:'Bebas Neue',sans-serif}
+    .stitem h3{font-size:1rem;font-weight:700;margin-bottom:6px;color:var(--tx);font-family:'Shippori Mincho',serif}
+    .stitem p{font-size:.84rem;color:var(--mu);line-height:1.75}
+
+    /* ──────────── WORKS ──────────── */
+    #works{background:var(--cr2)}
+    .wlead{font-size:.95rem;color:var(--mu);margin-bottom:56px;line-height:1.8}
+    .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--cr4)}
+    .wcard{
+      background:var(--cr);padding:0;
+      border-right:1px solid var(--cr4);
+      position:relative;overflow:hidden;
+      text-decoration:none;display:flex;flex-direction:column;
+      transition:background var(--on) var(--ease),transform var(--on) var(--ease);
+    }
+    .wcard:nth-child(3n){border-right:none}
+    .wcard:hover{background:var(--cr2);transform:translateY(-3px);transition:background var(--off) var(--ease),transform var(--off) var(--ease)}
+    .wcard-bar{height:3px;width:100%;flex-shrink:0}
+    .wcard-body{padding:22px 24px 20px;display:flex;flex-direction:column;flex:1}
+    .wcard-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+    .wcard-num{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--mu2);line-height:1}
+    .wcard-tag{font-size:.63rem;letter-spacing:.08em;border:1px solid var(--cr4);color:var(--mu2);padding:2px 8px}
+    .wcard-name{font-size:1.05rem;font-weight:700;color:var(--tx);margin-bottom:6px;font-family:'Shippori Mincho',serif;line-height:1.3}
+    .wcard-copy{font-size:.8rem;color:var(--mu);line-height:1.65;margin-bottom:16px;flex:1}
+    .wcard-url{font-size:.66rem;color:var(--mu2);letter-spacing:.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:14px}
+    .wcard-link{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:.74rem;color:var(--navy);
+      border:1px solid var(--navy);padding:5px 12px;
+      letter-spacing:.06em;align-self:flex-start;
+      transition:background var(--on) var(--ease),color var(--on) var(--ease);
+    }
+    .wcard:hover .wcard-link{background:var(--navy);color:var(--cr2);transition:background var(--off) var(--ease),color var(--off) var(--ease)}
+
+    /* ──────────── SERVICES ──────────── */
+    #services{background:var(--cr3)}
+    .swtable{margin-top:60px;overflow-x:auto}
+    table{width:100%;min-width:560px;border-collapse:collapse;border:1px solid var(--cr4)}
+    thead tr{background:var(--cr2)}
+    th{padding:18px 28px;font-size:.78rem;letter-spacing:.1em;color:var(--mu);border-right:1px solid var(--cr4);font-weight:400;text-align:left}
+    th.rec{color:var(--navy);border-top:2px solid var(--navy)}
+    th:last-child{border-right:none}
+    tbody tr{border-top:1px solid var(--cr4);transition:background var(--on) var(--ease)}
+    tbody tr:hover{background:var(--cr);transition:background var(--off) var(--ease)}
+    td{padding:20px 28px;font-size:.9rem;color:var(--mu);border-right:1px solid var(--cr4)}
+    td:last-child{border-right:none}
+    td.lbl{font-size:.84rem;color:var(--tx)}
+    .pnum{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--navy);line-height:1;display:block}
+    .psub{font-size:.72rem;color:var(--mu)}
+    .ck{color:var(--navy);font-size:1.1rem}
+    .ckn{color:var(--cr4)}
+
+    /* ──────────── TESTIMONIALS ──────────── */
+    #testimonials{background:var(--cr2)}
+    .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;border:1px solid var(--cr4);margin-top:60px}
+    .tc{
+      background:var(--cr);padding:36px 32px;
+      border-right:1px solid var(--cr4);
+      transition:background var(--on) var(--ease);
+    }
+    .tc:last-child{border-right:none}
+    .tc:hover{background:var(--cr2);transition:background var(--off) var(--ease)}
+    .tq{font-family:'Shippori Mincho',serif;font-size:4.5rem;line-height:.6;color:var(--navy);opacity:.2;margin-bottom:16px}
+    /* フチオビ引用 */
+    .th{display:inline-block;border:2px solid var(--cr4);background:var(--cr2);color:var(--tx);padding:4px 14px;font-size:1rem;font-weight:700;margin-bottom:14px;line-height:1.5;font-family:'Shippori Mincho',serif}
+    .tsub{font-size:.85rem;color:var(--mu);margin-bottom:20px;line-height:1.75}
+    .tfrom{font-size:.76rem;color:var(--navy);letter-spacing:.08em;border-top:1px solid var(--cr4);padding-top:14px}
+
+    /* ──────────── OWNER ──────────── */
+    #owner{background:var(--cr3)}
+    .owl{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:center;margin-top:60px}
+    .owimg{width:100%;aspect-ratio:3/4;background:var(--cr4);border:1px solid var(--cr4);display:flex;align-items:center;justify-content:center;color:var(--mu2);font-size:.82rem;letter-spacing:.05em;text-align:center;position:relative}
+    .owlabel{position:absolute;bottom:-1px;left:-1px;border:1px solid var(--navy);color:var(--navy);background:var(--cr3);padding:8px 16px;font-size:.72rem;font-weight:700;letter-spacing:.08em}
+    .owc h2{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:700;margin-bottom:28px;color:var(--tx);line-height:1.25}
+    .owc p{font-size:.93rem;color:var(--mu);margin-bottom:18px;line-height:1.9}
+    .owc p strong{color:var(--tx)}
+    .owname{font-family:'Shippori Mincho',serif;font-size:1.1rem;font-weight:700;color:var(--tx);margin-top:32px;padding-top:24px;border-top:1px solid var(--cr4)}
+    .owname span{font-size:.78rem;color:var(--mu);display:block;margin-top:5px;font-family:'Noto Sans JP',sans-serif}
+
+    /* ──────────── FLOW ──────────── */
+    #flow{background:var(--cr2)}
+    .flw{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:60px;border:1px solid var(--cr4)}
+    .fls{
+      background:var(--cr);padding:32px 24px;
+      border-right:1px solid var(--cr4);
+      position:relative;
+      transition:background var(--on) var(--ease);
+    }
+    .fls:last-child{border-right:none}
+    .fls:hover{background:var(--cr3);transition:background var(--off) var(--ease)}
+    .fls::after{content:'→';position:absolute;right:-16px;top:50%;transform:translateY(-50%);color:var(--navy);font-size:1.1rem;z-index:2}
+    .fls:last-child::after{display:none}
+    .flsn{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;color:var(--cr4);line-height:1;margin-bottom:14px}
+    .fls h3{font-size:.95rem;font-weight:700;margin-bottom:8px;color:var(--tx);font-family:'Shippori Mincho',serif}
+    .fls p{font-size:.82rem;color:var(--mu);line-height:1.7}
+    .flt{display:inline-block;margin-top:14px;font-size:.7rem;color:var(--navy);border:1px solid rgba(26,39,68,.3);padding:3px 10px;letter-spacing:.05em}
+
+    /* ──────────── CTA ──────────── */
+    #cta{
+      background:var(--navy);
+      text-align:center;padding:120px 48px;
+      position:relative;overflow:hidden;
+    }
+    #cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 65% at 50% 50%,rgba(245,240,232,.05),transparent)}
+    /* 薄い円装飾 */
+    #cta::after{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;border:1px solid rgba(245,240,232,.06);pointer-events:none}
+    .ctai{position:relative;max-width:680px;margin:0 auto}
+    .ctaey{font-family:'Bebas Neue',sans-serif;font-size:.82rem;letter-spacing:.22em;color:rgba(245,240,232,.5);margin-bottom:22px}
+    #cta h2{font-size:clamp(2rem,5vw,4rem);font-weight:700;color:var(--cr2);margin-bottom:20px;line-height:1.15}
+    .ctalead{font-size:1rem;color:rgba(245,240,232,.65);margin-bottom:18px;line-height:1.8}
+    /* CTAフチオビ緊急 */
+    .ctaurg{display:inline-block;border:1px solid rgba(245,240,232,.35);color:rgba(245,240,232,.75);padding:8px 22px;font-size:.85rem;margin-bottom:48px;letter-spacing:.06em}
+    .btnm{
+      display:inline-flex;align-items:center;justify-content:center;gap:12px;
+      background:var(--cr2);color:var(--navy);
+      padding:22px 60px;font-size:1.05rem;font-weight:900;
+      text-decoration:none;letter-spacing:.06em;
+      position:relative;overflow:hidden;
+      width:100%;max-width:480px;
+      transition:transform var(--on) var(--ease),box-shadow var(--on) var(--ease);
+    }
+    .btnm::before{content:'';position:absolute;inset:0;background:var(--cr);transform:scaleX(0);transform-origin:left;transition:transform var(--on) var(--ease)}
+    .btnm:hover::before{transform:scaleX(1);transition:transform var(--off) var(--ease)}
+    .btnm:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(26,39,68,.3);transition:transform var(--off) var(--ease),box-shadow var(--off) var(--ease)}
+    .btnm span{position:relative;z-index:1}
+    .ctanote{font-size:.76rem;color:rgba(245,240,232,.45);margin-top:16px}
+
+    /* ──────────── FAQ ──────────── */
+    #faq{background:var(--cr3)}
+    .fql{margin-top:56px;border:1px solid var(--cr4)}
+    .fqi{border-bottom:1px solid var(--cr4)}
+    .fqi:last-child{border-bottom:none}
+    .fqq{padding:22px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background var(--on) var(--ease)}
+    .fqq:hover{background:var(--cr2);transition:background var(--off) var(--ease)}
+    .fqqt{font-size:.95rem;font-weight:700;display:flex;gap:16px;align-items:flex-start;color:var(--tx);font-family:'Shippori Mincho',serif}
+    .qm{color:var(--navy);font-family:'Bebas Neue',sans-serif;font-size:1.4rem;line-height:1;flex-shrink:0}
+    .fqtog{color:var(--navy);font-size:1.5rem;flex-shrink:0;transition:transform var(--on) var(--ease)}
+    .fqi.open .fqtog{transform:rotate(45deg)}
+    .fqa{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
+    .fqai{padding:0 28px 22px 60px;font-size:.88rem;color:var(--mu);line-height:1.85}
+
+    /* ──────────── FOOTER ──────────── */
+    footer{background:var(--cr3);border-top:1px solid var(--cr4);padding:60px 48px 32px}
+    .fti{max-width:1100px;margin:0 auto}
+    .fttop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px;gap:40px}
+    .ftbrand{max-width:320px}
+    .ftlogo{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.1em;color:var(--navy);margin-bottom:14px}
+    .ftlogo span{color:var(--mu)}
+    .ftag{font-size:.82rem;color:var(--mu);line-height:1.75}
+    .ftnav{display:flex;gap:48px;flex-wrap:wrap}
+    .ftnc h4{font-size:.7rem;letter-spacing:.14em;color:var(--navy);margin-bottom:14px}
+    .ftnc a{display:block;font-size:.82rem;color:var(--mu);text-decoration:none;margin-bottom:8px;transition:color var(--on) var(--ease)}
+    .ftnc a:hover{color:var(--navy);transition:color var(--off) var(--ease)}
+    .ftbot{border-top:1px solid var(--cr4);padding-top:22px;display:flex;justify-content:space-between;align-items:center}
+    .ftcopy{font-size:.74rem;color:var(--mu2)}
+
+    /* ──────────── REVEAL ──────────── */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .72s var(--ease),transform .72s var(--ease)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    @keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ──────────── RESPONSIVE ──────────── */
+    @media(max-width:960px){
+      header{padding:0 20px}nav{display:none}
+      section{padding:70px 20px}#hero{padding:110px 20px 60px}
+      .hcircle,.hcircle2{display:none}
+      .sf{grid-template-columns:1fr}
+      .stl{grid-template-columns:1fr;gap:40px}
+      .owl{grid-template-columns:1fr;gap:40px}
+      .flw{grid-template-columns:1fr 1fr}.fls::after{display:none}
+      .wgrid{grid-template-columns:repeat(2,1fr)}
+      .wcard:nth-child(3n){border-right:1px solid var(--cr4)}
+      .wcard:nth-child(2n){border-right:none}
+      footer{padding:40px 20px 24px}.fttop{flex-direction:column}
+    }
+    @media(max-width:600px){
+      h1{font-size:2.4rem}.h1fuchi{font-size:2.4rem}.h1rest{font-size:2.4rem}
+      .hstats{flex-wrap:wrap;gap:20px}
+      .hstat{border-right:none;padding-right:0;margin-right:0}
+      .pg{grid-template-columns:1fr}
+      .tgrid{grid-template-columns:1fr}
+      .flw{grid-template-columns:1fr}
+      .wgrid{grid-template-columns:1fr}
+      .wcard:nth-child(n){border-right:none}
+      .ftbot{flex-direction:column;gap:10px;text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo">FUKUOKA <span>CONNECT</span></a>
+  <nav>
+    <a href="#solution">サービス</a>
+    <a href="#works">実績</a>
+    <a href="#strength">強み</a>
+    <a href="#services">料金</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a href="#cta" class="hcta">無料相談する</a>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hgrid"></div>
+  <div class="hcircle"></div>
+  <div class="hcircle2"></div>
+  <div class="hi">
+    <div class="heb"><div class="hebl"></div><span>AI-POWERED LP PRODUCTION</span></div>
+    <h1>あな<span class="sm">た</span>のビジネス<span class="sm">を、</span></h1>
+    <span class="h1line2">
+      <span class="h1fuchi">今日</span><span class="h1rest">から加速<span class="sm">させる。</span></span>
+    </span>
+    <p class="hsub">AIと行動経済学で設計する「売れる」LP。<br>最短即日・通常の半額以下で、あなたのビジネスを動かす。</p>
+    <div class="hstats">
+      <div class="hstat"><div class="hstat-num">11<sup>社+</sup></div><div class="hstat-label">開始1ヶ月 導入実績</div></div>
+      <div class="hstat"><div class="hstat-num">1/2</div><div class="hstat-label">通常制作比 コスト</div></div>
+      <div class="hstat"><div class="hstat-num">1<sup>日〜</sup></div><div class="hstat-label">最短納品スピード</div></div>
+    </div>
+    <div class="hctas">
+      <a href="#cta" class="btnp"><span>▶ 無料で相談する</span></a>
+      <a href="#solution" class="btng">サービスを見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="tw" aria-hidden="true">
+  <div class="tk">
+    <span class="ti">AI-POWERED LP</span><span class="ti">× 最短即日納品</span><span class="ti">× SEO対策込み</span>
+    <span class="ti">× 毎日LINEレポート</span><span class="ti">× 通常の半額以下</span><span class="ti">× FUKUOKA CONNECT</span>
+    <span class="ti">× AI-POWERED LP</span><span class="ti">× 最短即日納品</span><span class="ti">× SEO対策込み</span>
+    <span class="ti">× 毎日LINEレポート</span><span class="ti">× 通常の半額以下</span><span class="ti">× FUKUOKA CONNECT</span>
+  </div>
+</div>
+
+<!-- PAIN -->
+<section id="pain">
+  <div class="si2">
+    <span class="slabel reveal">PROBLEM</span>
+    <h2 class="sh2 reveal">こん<span class="sm">な</span>お悩み、<br><span class="marker">ありませ<span class="sm">ん</span>か？</span></h2>
+    <div class="pg">
+      <div class="pc reveal"><div class="pn">01</div><h3>IT<span class="sm">の</span>こと<span class="sm">は</span><br>全然わからない</h3><p>ホームページやLPを作りたいけど、何から始めればいいかわからない。専門用語も難しくて挫折した経験がある。</p></div>
+      <div class="pc reveal"><div class="pn">02</div><h3>SNS<span class="sm">は</span>やっている<span class="sm">のに</span><br>集客につながらない</h3><p>毎日投稿しているのに問い合わせが来ない。フォロワーは増えても売上に直結しない。</p></div>
+      <div class="pc reveal"><div class="pn">03</div><h3>制作会社<span class="sm">に</span>頼んだら<br>高くて時間もかかる</h3><p>見積もりを取ったら数十万円。しかも完成まで1〜2ヶ月待たされる。今すぐ動きたいのに。</p></div>
+      <div class="pc reveal"><div class="pn">04</div><h3>作ったけど<span class="sm">、</span><br>効果<span class="sm">が</span>わからない</h3><p>以前LPを作ったが、どれくらいの人が見ているのか、どこで離脱しているのかがわからないまま放置している。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+  <div class="si2">
+    <span class="slabel reveal">SOLUTION</span>
+    <h2 class="sh2 reveal">FUKUOKA CONNECT<span class="sm">が</span><br><span class="fuchi">全部解決</span>します。</h2>
+    <p class="slead reveal"><strong>「ITのことは全然わからない」</strong>でも大丈夫。<br>いくつかの項目を入力・送信するだけで、最短即日で<strong>「売れる」ページ</strong>が完成します。</p>
+    <div class="sf">
+      <div class="fc reveal"><div class="fi">01</div><h3><span class="fuchi">超速</span>納品</h3><p>通常の制作会社では早くても1ヶ月かかるLP制作が、最短即日で完成。思い立ったその日から動けます。</p><span class="ft">SAME DAY DELIVERY</span></div>
+      <div class="fc reveal"><div class="fi">02</div><h3><span class="fuchi">高品質</span>設計</h3><p>行動経済学・グラフィックデザイン・Webマーケティングの視点で設計。見た人の「おや？なるほど！」を引き出し、行動を促す裏付けのあるデザイン。</p><span class="ft">PSYCHOLOGY-DRIVEN</span></div>
+      <div class="fc reveal"><div class="fi">03</div><h3><span class="fuchi">データ</span>で改善</h3><p>SEO対策・GA4アクセス解析を標準搭載。アクセス状況・CVR・検索順位をLINEで毎日レポートしてお届けします。</p><span class="ft">DAILY LINE REPORT</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTH -->
+<section id="strength">
+  <div class="si2">
+    <span class="slabel reveal">WHY US</span>
+    <h2 class="sh2 reveal">一般<span class="sm">の</span>制作会社<span class="sm">が</span><br>絶対<span class="sm">に</span>辿り着<span class="sm">けない</span><br><span class="fuchi">説得力</span>があります。</h2>
+    <div class="stl">
+      <div class="stv reveal">
+        <div class="stbn">11+</div>
+        <div class="stbadge">サービス開始1ヶ月で<br>11社以上が導入</div>
+      </div>
+      <div class="stlist">
+        <div class="stitem reveal"><div class="sticon">★</div><div><h3>現役オーナーだから<span class="sm">わかる</span>、解像度</h3><p>このサービスを開発したのは、今日も店に立つ飲食店オーナー。現場で試行錯誤し、自ら実験を続けています。</p></div></div>
+        <div class="stitem reveal"><div class="sticon">AI</div><div><h3>AIを「指揮できる人」<span class="sm">が</span>いる</h3><p>ただAIを使うだけでなく、ビジネスを理解したディレクションが入ることで、出力の質が段違いに変わります。</p></div></div>
+        <div class="stitem reveal"><div class="sticon">¥</div><div><h3>通常価格<span class="sm">の</span>半分以下</h3><p>大手制作会社なら30〜100万円かかるLP制作を、AIを活用することで大幅にコストダウン。</p></div></div>
+        <div class="stitem reveal"><div class="sticon">📊</div><div><h3>作って終わり<span class="sm">じゃ</span>ない</h3><p>GA4・Search ConsoleによるSEO分析、毎日のLINEレポートで継続的に改善。SNS投稿文自動作成も使い放題。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section id="works">
+  <div class="si2">
+    <span class="slabel reveal">WORKS</span>
+    <h2 class="sh2 reveal">制作<span class="sm">した</span>LP実績</h2>
+    <p class="wlead reveal">飲食・美容・塗装・中古車・整体など、業種を問わず対応。<br>すべてSEO対策・GA4計測つきで納品しています。</p>
+    <div class="wgrid">
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/umi-ice/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#a8c4a0,#6b9e8a)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">01</span><span class="wcard-tag">飲食・スイーツ</span></div>
+          <div class="wcard-name">産み愛す / Umi-Ice</div>
+          <div class="wcard-copy">宇美町のヤギミルクで作った、やさしいアイスクリーム。自然・有機的なビジュアルで世界観を構築。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/umi-ice/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/sofuren-umi/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#8b5e1a,#c8922a)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">02</span><span class="wcard-tag">飲食・焼そば</span></div>
+          <div class="wcard-name">想夫恋 宇美店</div>
+          <div class="wcard-copy">「宇美店が一番旨い」Googleレビューが語る本物の味。パリパリ食感をビジュアルで伝える和モダンLP。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/sofuren-umi/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://sofurenumi-glitch.github.io/sofuren-furikake/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#6b4a12,#c8a030)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">03</span><span class="wcard-tag">商品・EC</span></div>
+          <div class="wcard-name">想夫恋 ふりかけLP</div>
+          <div class="wcard-copy">「焼きそばの途中で、振ってください。」店でしかできなかった味変を家庭へ。商品LP×EC導線設計。</div>
+          <div class="wcard-url">sofurenumi-glitch.github.io/sofuren-furikake/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/hanamaru/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#4a7a4a,#7ab87a)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">04</span><span class="wcard-tag">ギフト・手工芸</span></div>
+          <div class="wcard-name">はなまる工房</div>
+          <div class="wcard-copy">「伝わる想い、感じる温もり。」国産い草の畳に刺繍を施した、世界にひとつの命名書「喜び畳」。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/hanamaru/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/kowa-tosou/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#c0392b,#e74c3c)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">05</span><span class="wcard-tag">建設・採用</span></div>
+          <div class="wcard-name">興和塗装</div>
+          <div class="wcard-copy">「その手で、街をつくる職人になる。」採用強化中の塗装会社。力強いビジュアルで求職者に刺さるLP。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/kowa-tosou/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/makibo/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#e67e22,#f39c12)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">06</span><span class="wcard-tag">アウトドア・販売</span></div>
+          <div class="wcard-name">MAKIBO</div>
+          <div class="wcard-copy">「焚き火 × MAKIBO」広葉樹の薪を業界最安クラスで。無人販売・QR決済対応の薪専門販売所。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/makibo/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/torifuji/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#b8960a,#d4af37)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">07</span><span class="wcard-tag">飲食・ランチ</span></div>
+          <div class="wcard-name">鶏富士</div>
+          <div class="wcard-copy">「居酒屋が本気で作った鍋焼きラーメン、知らないと損です。」JP・KR・EN 3言語対応のグローバルLP。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/torifuji/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/sera/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#7b3a2a,#c06040)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">08</span><span class="wcard-tag">美容・サロン</span></div>
+          <div class="wcard-name">SERA</div>
+          <div class="wcard-copy">「ここは、あなただけの時間と空間です。」女性専用リラクゼーションサロン。上質なブラウン×余白で表現。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/sera/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/chinen-chan/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#2ecc71,#27ae60)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">09</span><span class="wcard-tag">健康・整体</span></div>
+          <div class="wcard-name">出張整体 ちねんちゃん</div>
+          <div class="wcard-copy">「あなたのいる場所へ、整体を届けます。」完全予約制・出張専門。移動ゼロの新しい整体体験を訴求。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/chinen-chan/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/cars-fukuoka/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#1a1a1a,#2ecc71)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">10</span><span class="wcard-tag">中古車・販売</span></div>
+          <div class="wcard-name">CARS FUKUOKA</div>
+          <div class="wcard-copy">「CREATING BESPOKE VEHICLES.」ランドクルーザー・クロカン専門。常時40台在庫、全国配送対応。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/cars-fukuoka/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+      <a class="wcard reveal" href="https://fukuoka-connect.github.io/hayashi/" target="_blank" rel="noopener">
+        <div class="wcard-bar" style="background:linear-gradient(90deg,#c8a060,#e8c080)"></div>
+        <div class="wcard-body">
+          <div class="wcard-meta"><span class="wcard-num">11</span><span class="wcard-tag">飲食・ハンバーグ</span></div>
+          <div class="wcard-name">HAYASHI</div>
+          <div class="wcard-copy">「選べるソースとこだわりのハンバーグ。」温かみのある和モダンデザインでメニューの魅力を最大化。</div>
+          <div class="wcard-url">fukuoka-connect.github.io/hayashi/</div>
+          <span class="wcard-link">サイトを見る →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="si2">
+    <span class="slabel reveal">PRICING</span>
+    <h2 class="sh2 reveal">シンプル<span class="sm">な</span>料金<span class="sm">で、</span><br>すぐ<span class="sm">に</span>始<span class="sm">められる。</span></h2>
+    <div class="swtable reveal">
+      <table>
+        <thead><tr>
+          <th>サービス内容</th>
+          <th>STARTER</th>
+          <th class="rec">STANDARD（おすすめ）</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="lbl">月額料金</td><td><span class="pnum">¥9,800</span><span class="psub">/月</span></td><td><span class="pnum">¥14,800</span><span class="psub">/月</span></td></tr>
+          <tr><td class="lbl">LP制作（初回）</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lbl">SEO対策</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lbl">GA4アクセス解析</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lbl">毎日LINEレポート</td><td><span class="ckn">—</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lbl">SNS投稿文 自動生成AIツール</td><td><span class="ckn">—</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lbl">原価計算アプリ利用</td><td><span class="ckn">—</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lbl">月次改善提案</td><td><span class="ckn">—</span></td><td><span class="ck">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="si2">
+    <span class="slabel reveal">VOICE</span>
+    <h2 class="sh2 reveal">お客様<span class="sm">の</span>声</h2>
+    <div class="tgrid">
+      <div class="tc reveal"><div class="tq">"</div><div class="th">めちゃくちゃわかりやすい！</div><p class="tsub">何を伝えればいいかを一緒に考えてくれて、気づいたらページが完成していました。</p><div class="tfrom">美容サロン SERA オーナー</div></div>
+      <div class="tc reveal"><div class="tq">"</div><div class="th">こんなのが欲しかったんです！</div><p class="tsub">依頼してから翌日には完成していて驚きました。デザインも想像以上で大好評でした。</p><div class="tfrom">整体院 ちねんちゃん オーナー</div></div>
+      <div class="tc reveal"><div class="tq">"</div><div class="th">毎日レポートが届くのが嬉しい</div><p class="tsub">「何人が見ているか」がわかるだけでこんなにやる気が出るとは。数字を見ながら次の手を考えられます。</p><div class="tfrom">飲食店オーナー（糟屋郡）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER -->
+<section id="owner">
+  <div class="si2">
+    <span class="slabel reveal">OUR STORY</span>
+    <div class="owl">
+      <div class="reveal" style="position:relative">
+        <div class="owimg">オーナー写真<br>（後藤 堅太郎）</div>
+        <div class="owlabel">FUKUOKA CONNECT 代表</div>
+      </div>
+      <div class="owc reveal">
+        <h2>今日<span class="sm">、</span>たった今<span class="sm">から、</span><br>あなた<span class="sm">の</span>ビジネス<span class="sm">を</span><br><span class="fuchi">加速</span>させる準備<span class="sm">が</span>できています。</h2>
+        <p>私は福岡・宇美町で<strong>焼きそば専門店「想夫恋 宇美店」</strong>を営む、現役の飲食店オーナーです。</p>
+        <p>「集客に悩んでいる」「SNSをやっているけど全然反応がない」「ホームページを作りたいけど何から始めればいいかわからない」——これは過去の自分の悩みでもあります。</p>
+        <p>自分自身がAIとWebマーケティングを学び、試行錯誤を繰り返した結果、<strong>自分の店のLP制作・SEO対策・データ分析を内製化することに成功</strong>しました。</p>
+        <p>同じように悩む地域の中小企業・個人事業主の方々に、この力を届けたい。<strong>今日、ビジネスを加速させる準備はできています。あなたはどうですか？</strong></p>
+        <div class="owname">後藤 堅太郎（Goto Kentaro）<span>想夫恋 宇美店 二代目 / FUKUOKA CONNECT 代表 / BOOKS Terminal 創設者</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow">
+  <div class="si2">
+    <span class="slabel reveal">FLOW</span>
+    <h2 class="sh2 reveal">最短即日<span class="sm">で</span>完成<span class="sm">する</span><br>シンプル<span class="sm">な</span>4ステップ</h2>
+    <div class="flw">
+      <div class="fls reveal"><div class="flsn">01</div><h3>無料相談・ヒアリング</h3><p>フォームまたはLINEからご連絡ください。ビジネスの内容・目標をヒアリングします。</p><span class="flt">約30分</span></div>
+      <div class="fls reveal"><div class="flsn">02</div><h3>構成・コピー設計</h3><p>行動経済学に基づくLP構成とキャッチコピーを設計します。</p><span class="flt">即日〜翌日</span></div>
+      <div class="fls reveal"><div class="flsn">03</div><h3>LP制作・SEO設定</h3><p>高品質なLPをコーディング。SEO・GA4・Search Console登録まで一括対応。</p><span class="flt">即日〜3日</span></div>
+      <div class="fls reveal"><div class="flsn">04</div><h3>公開・レポート開始</h3><p>公開後すぐにデータ計測を開始。翌日からLINEレポートをお届けします。</p><span class="flt">公開翌日〜</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="ctai">
+    <div class="ctaey reveal">START TODAY</div>
+    <h2 class="reveal">今日<span class="sm">から</span>始<span class="sm">める、</span><br>最初<span class="sm">の</span>一歩</h2>
+    <p class="ctalead reveal">まずは無料相談から。30分のヒアリングで、あなたのビジネスに最適なLP設計をご提案します。</p>
+    <div class="reveal"><span class="ctaurg">⚡ 今なら初月無料モニター枠あり（残り若干名）</span></div>
+    <div class="reveal" style="display:flex;flex-direction:column;align-items:center;margin-top:0">
+      <a href="#" class="btnm"><span>▶ 無料相談フォームへ</span></a>
+      <p class="ctanote">※ 完全無料・押し売り一切なし・LINEでも対応可</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="si2">
+    <span class="slabel reveal">FAQ</span>
+    <h2 class="sh2 reveal">よくある<span class="sm">ご</span>質問</h2>
+    <div class="fql reveal">
+      <div class="fqi"><div class="fqq"><div class="fqqt"><span class="qm">Q</span><span>ITのことが全くわからなくても大丈夫ですか？</span></div><span class="fqtog">+</span></div><div class="fqa"><div class="fqai">はい、まったく問題ありません。ヒアリングシートに沿って情報を入力するだけで、あとはすべてこちらで対応します。</div></div></div>
+      <div class="fqi"><div class="fqq"><div class="fqqt"><span class="qm">Q</span><span>「最短即日」とは本当に当日に完成するのですか？</span></div><span class="fqtog">+</span></div><div class="fqa"><div class="fqai">ヒアリングの内容・素材の準備状況によりますが、シンプルな構成であれば当日〜翌日での納品が可能です。</div></div></div>
+      <div class="fqi"><div class="fqq"><div class="fqqt"><span class="qm">Q</span><span>どんな業種でも対応できますか？</span></div><span class="fqtog">+</span></div><div class="fqa"><div class="fqai">飲食店・美容室・整体院・工務店・小売店・イベント主催者など、幅広い業種に対応しています。</div></div></div>
+      <div class="fqi"><div class="fqq"><div class="fqqt"><span class="qm">Q</span><span>毎日LINEレポートとはどんな内容ですか？</span></div><span class="fqtog">+</span></div><div class="fqa"><div class="fqai">GA4とSearch Consoleのデータをもとに、アクセス数・ユーザー数・検索キーワード・CVRなどをLINEでわかりやすくお届けします。</div></div></div>
+      <div class="fqi"><div class="fqq"><div class="fqqt"><span class="qm">Q</span><span>解約はいつでもできますか？</span></div><span class="fqtog">+</span></div><div class="fqa"><div class="fqai">はい、月単位でのご契約となっており、いつでも解約可能です。最低契約期間の縛りはございません。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fti">
+    <div class="fttop">
+      <div class="ftbrand">
+        <div class="ftlogo">FUKUOKA <span>CONNECT</span></div>
+        <p class="ftag">AIを活用して中小企業・個人事業主のビジネスを加速させる、LP制作・運用代行サービス。福岡・宇美町から全国へ。</p>
+      </div>
+      <div class="ftnav">
+        <div class="ftnc"><h4>SERVICE</h4><a href="#solution">サービス概要</a><a href="#services">料金プラン</a><a href="#flow">制作の流れ</a></div>
+        <div class="ftnc"><h4>ABOUT</h4><a href="#strength">選ばれる理由</a><a href="#owner">オーナー紹介</a><a href="#testimonials">お客様の声</a></div>
+        <div class="ftnc"><h4>CONTACT</h4><a href="#cta">無料相談フォーム</a><a href="#faq">よくある質問</a></div>
+      </div>
+    </div>
+    <div class="ftbot">
+      <p class="ftcopy">© 2024 FUKUOKA CONNECT. All rights reserved.</p>
+      <p class="ftcopy">想夫恋 宇美店 後藤 堅太郎</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // SCROLL REVEAL
+  const ro=new IntersectionObserver((es)=>{
+    es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*55);ro.unobserve(e.target);}});
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(r=>ro.observe(r));
+
+  // FAQ
+  document.querySelectorAll('.fqq').forEach(q=>{
+    q.addEventListener('click',()=>{
+      const item=q.parentElement,ans=item.querySelector('.fqa'),open=item.classList.contains('open');
+      document.querySelectorAll('.fqi.open').forEach(i=>{i.classList.remove('open');i.querySelector('.fqa').style.maxHeight='0';});
+      if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+    });
+  });
+
+  // SCROLL DEPTH
+  const deps=[25,50,75,100],rch=new Set();
+  window.addEventListener('scroll',()=>{
+    const p=Math.round(((window.scrollY+window.innerHeight)/document.body.scrollHeight)*100);
+    deps.forEach(d=>{if(p>=d&&!rch.has(d)){rch.add(d);if(typeof gtag!=='undefined')gtag('event','scroll_depth',{event_category:'engagement',event_label:d+'%'});}});
+  },{passive:true});
+
+  // SECTION VIEW
+  const so=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){if(typeof gtag!=='undefined')gtag('event','section_view',{event_category:'engagement',event_label:e.target.id});so.unobserve(e.target);}});},{threshold:.3});
+  document.querySelectorAll('section[id]').forEach(s=>so.observe(s));
+
+  // CTA CLICK
+  document.querySelectorAll('.btnm,.btnp,.hcta').forEach(b=>{b.addEventListener('click',()=>{if(typeof gtag!=='undefined')gtag('event','cta_click',{event_category:'conversion',event_label:b.textContent.trim().slice(0,40),event_location:b.closest('section')?.id||'header'});});});
+</script>
+</body>
+</html>
