@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FUKUOKA CONNECT｜AIで最短即日・売れるLP制作サービス</title>
-  <meta name="description" content="AIを活用し最短即日で高品質なLP（ランディングページ）を制作。SEO対策・GA4アクセス解析レポートのLINE毎日配信つき。福岡の中小企業・個人事業主を加速させるLP制作代行サービス。">
+  <title>FUKUOKA CONNECT｜AIで最短即日・届くLP制作サービス</title>
+  <meta name="description" content="AIを活用し最短即日で高品質なLP（ランディングページ）を制作。SEO対策・GA4アクセス解析レポートのLINE毎日配信つき。福岡の中小企業・個人事業主のビジネスを必要な人に届けるLP制作代行サービス。">
   <meta name="keywords" content="LP制作,ランディングページ,ホームページ,ウェブサイト,福岡,AI,即日,SEO対策,集客">
   <link rel="canonical" href="https://fukuoka-connect.github.io/">
-  <meta property="og:title" content="FUKUOKA CONNECT｜AIで最短即日・売れるLP制作">
-  <meta property="og:description" content="最短即日、通常の半額以下。AIで設計する「売れる」LP制作サービス。SEOとGA4レポートも込み。">
+  <meta property="og:title" content="FUKUOKA CONNECT｜AIで最短即日・届くLP制作">
+  <meta property="og:description" content="最短即日、通常の半額以下。AIで設計する「届く」LP制作サービス。SEOとGA4レポートも込み。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fukuoka-connect.github.io/">
   <meta property="og:image" content="https://fukuoka-connect.github.io/ogp.jpg">
   <meta property="og:site_name" content="FUKUOKA CONNECT">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FUKUOKA CONNECT｜AIで最短即日・売れるLP制作">
+  <meta name="twitter:title" content="FUKUOKA CONNECT｜AIで最短即日・届くLP制作">
   <meta name="twitter:description" content="最短即日、通常の半額以下。SEO込み・LINEレポートつきのLP制作代行。">
   <meta name="twitter:image" content="https://fukuoka-connect.github.io/ogp.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -294,8 +294,7 @@
     /* ──────────── OWNER ──────────── */
     #owner{background:var(--cr3)}
     .owl{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:center;margin-top:60px}
-    .owimg{width:100%;aspect-ratio:3/4;background:var(--cr4);border:1px solid var(--cr4);display:flex;align-items:center;justify-content:center;color:var(--mu2);font-size:.82rem;letter-spacing:.05em;text-align:center;position:relative;overflow:hidden}
-    .owimg img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+    .owimg{width:100%;aspect-ratio:3/4;background:var(--cr4);border:1px solid var(--cr4);display:flex;align-items:center;justify-content:center;color:var(--mu2);font-size:.82rem;letter-spacing:.05em;text-align:center;position:relative}
     .owlabel{position:absolute;bottom:-1px;left:-1px;border:1px solid var(--navy);color:var(--navy);background:var(--cr3);padding:8px 16px;font-size:.72rem;font-weight:700;letter-spacing:.08em}
     .owc h2{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:700;margin-bottom:28px;color:var(--tx);line-height:1.25}
     .owc p{font-size:.93rem;color:var(--mu);margin-bottom:18px;line-height:1.9}
@@ -380,6 +379,37 @@
     .ftbot{border-top:1px solid var(--cr4);padding-top:22px;display:flex;justify-content:space-between;align-items:center}
     .ftcopy{font-size:.74rem;color:var(--mu2)}
 
+    /* ────────────断り ──────────── */
+    #断り{background:var(--navy);color:var(--cr2)}
+    #断り .slabel{color:rgba(245,240,232,.45)}
+    #断り .slabel::before{background:rgba(245,240,232,.3)}
+    #断り .sh2{color:var(--cr2)}
+    .kotowari-lead{font-size:1rem;color:rgba(245,240,232,.65);margin-bottom:52px;line-height:1.85;max-width:600px}
+    .kotowari-list{display:flex;flex-direction:column;gap:1px;margin-bottom:52px}
+    .kotowari-item{
+      display:flex;align-items:flex-start;gap:24px;
+      border:1px solid rgba(245,240,232,.12);
+      padding:28px 32px;
+      background:rgba(245,240,232,.04);
+      transition:background var(--on) var(--ease);
+    }
+    .kotowari-item:hover{background:rgba(245,240,232,.07);transition:background var(--off) var(--ease)}
+    .kotowari-x{
+      font-family:'Bebas Neue',sans-serif;font-size:1.6rem;
+      color:rgba(245,240,232,.25);
+      flex-shrink:0;line-height:1;margin-top:2px;
+    }
+    .kotowari-item h3{font-size:1.05rem;font-weight:700;color:var(--cr2);margin-bottom:6px;font-family:'Shippori Mincho',serif}
+    .kotowari-item p{font-size:.85rem;color:rgba(245,240,232,.55);line-height:1.75}
+    .kotowari-close{
+      border:1px solid rgba(245,240,232,.2);
+      padding:28px 36px;
+      background:rgba(245,240,232,.05);
+      max-width:640px;
+    }
+    .kotowari-close p{font-size:.95rem;color:rgba(245,240,232,.7);line-height:1.9}
+    .kotowari-close p strong{color:var(--cr2)}
+
     /* ──────────── REVEAL ──────────── */
     .reveal{opacity:0;transform:translateY(20px);transition:opacity .72s var(--ease),transform .72s var(--ease)}
     .reveal.visible{opacity:1;transform:translateY(0)}
@@ -440,7 +470,7 @@
     <span class="h1line2">
       <span class="h1fuchi">今日</span><span class="h1rest">から加速<span class="sm">させる。</span></span>
     </span>
-    <p class="hsub">AIと行動経済学で設計する「売れる」LP。<br>最短即日・通常の半額以下で、あなたのビジネスを動かす。</p>
+    <p class="hsub">AIと行動経済学で設計する「届く」LP。<br>最短即日・通常の半額以下で、あなたのビジネスを必要な人へ届ける。</p>
     <div class="hstats">
       <div class="hstat"><div class="hstat-num">11<sup>社+</sup></div><div class="hstat-label">開始1ヶ月 導入実績</div></div>
       <div class="hstat"><div class="hstat-num">1/2</div><div class="hstat-label">通常制作比 コスト</div></div>
@@ -482,7 +512,7 @@
   <div class="si2">
     <span class="slabel reveal">SOLUTION</span>
     <h2 class="sh2 reveal">FUKUOKA CONNECT<span class="sm">が</span><br><span class="fuchi">全部解決</span>します。</h2>
-    <p class="slead reveal"><strong>「ITのことは全然わからない」</strong>でも大丈夫。<br>いくつかの項目を入力・送信するだけで、最短即日で<strong>「売れる」ページ</strong>が完成します。</p>
+    <p class="slead reveal"><strong>「ITのことは全然わからない」</strong>でも大丈夫。<br>いくつかの項目を入力・送信するだけで、最短即日で<strong>必要な人に「届く」ページ</strong>が完成します。</p>
     <div class="sf">
       <div class="fc reveal"><div class="fi">01</div><h3><span class="fuchi">超速</span>納品</h3><p>通常の制作会社では早くても1ヶ月かかるLP制作が、最短即日で完成。思い立ったその日から動けます。</p><span class="ft">SAME DAY DELIVERY</span></div>
       <div class="fc reveal"><div class="fi">02</div><h3><span class="fuchi">高品質</span>設計</h3><p>行動経済学・グラフィックデザイン・Webマーケティングの視点で設計。見た人の「おや？なるほど！」を引き出し、行動を促す裏付けのあるデザイン。</p><span class="ft">PSYCHOLOGY-DRIVEN</span></div>
@@ -678,7 +708,7 @@
     <span class="slabel reveal">OUR STORY</span>
     <div class="owl">
       <div class="reveal" style="position:relative">
-        <div class="owimg"><img src="images/hero.png" alt="後藤 堅太郎 — FUKUOKA CONNECT 代表" width="960" height="1200"></div>
+        <div class="owimg">オーナー写真<br>（後藤 堅太郎）</div>
         <div class="owlabel">FUKUOKA CONNECT 代表</div>
       </div>
       <div class="owc reveal">
@@ -703,6 +733,41 @@
       <div class="fls reveal"><div class="flsn">02</div><h3>構成・コピー設計</h3><p>行動経済学に基づくLP構成とキャッチコピーを設計します。</p><span class="flt">即日〜翌日</span></div>
       <div class="fls reveal"><div class="flsn">03</div><h3>LP制作・SEO設定</h3><p>高品質なLPをコーディング。SEO・GA4・Search Console登録まで一括対応。</p><span class="flt">即日〜3日</span></div>
       <div class="fls reveal"><div class="flsn">04</div><h3>公開・レポート開始</h3><p>公開後すぐにデータ計測を開始。翌日からLINEレポートをお届けします。</p><span class="flt">公開翌日〜</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- お断り -->
+<section id="断り">
+  <div class="si2">
+    <span class="slabel reveal">NOTICE</span>
+    <h2 class="sh2 reveal">お断り<span class="sm">する</span>こと<span class="sm">も</span>あります。</h2>
+    <p class="kotowari-lead reveal">FUKUOKA CONNECTは、ともに考え、ともに改善し続ける方と仕事をしたいと思っています。そのため、以下に当てはまる方へのご提供をお断りする場合があります。</p>
+    <div class="kotowari-list">
+      <div class="kotowari-item reveal">
+        <div class="kotowari-x">×</div>
+        <div>
+          <h3>届けたい情報<span class="sm">が</span>ない</h3>
+          <p>商品・サービスの魅力や、お客様へ伝えたい想いが特にない方。LPは「情報を届ける器」です。届ける中身がなければ、器だけ作っても意味がありません。</p>
+        </div>
+      </div>
+      <div class="kotowari-item reveal">
+        <div class="kotowari-x">×</div>
+        <div>
+          <h3>業績<span class="sm">を</span>上げるつもり<span class="sm">が</span>ない</h3>
+          <p>「なんとなく作っておきたい」という方。LPは目的を持って設計するものです。数字を追う意思がなければ、データを活かすことができません。</p>
+        </div>
+      </div>
+      <div class="kotowari-item reveal">
+        <div class="kotowari-x">×</div>
+        <div>
+          <h3>改善<span class="sm">する</span>つもり<span class="sm">が</span>ない</h3>
+          <p>公開したら終わり、と考えている方。LPは育てるものです。データを見て、試して、また届ける。その繰り返しが結果を生みます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="kotowari-close reveal">
+      <p>そん<span class="sm">な</span><strong>完璧な方</strong>は、このサービスを受ける理由がないのでお断りすることがあります。<br><br>逆に言えば、<strong>「届けたい人がいる」「もっとよくしたい」「数字を見て動きたい」</strong>——そう思っている方なら、業種も規模も問いません。一緒にやりましょう。</p>
     </div>
   </div>
 </section>
