@@ -239,7 +239,7 @@
     /* ──────────── WORKS ──────────── */
     #works{background:var(--cr2)}
     .wlead{font-size:.95rem;color:var(--mu);margin-bottom:56px;line-height:1.8}
-    .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--cr4)}
+    .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--cr4);align-items:start}
     .wcard{
       background:var(--cr);padding:0;
       border-right:1px solid var(--cr4);
@@ -265,7 +265,10 @@
       transition:background var(--on) var(--ease),color var(--on) var(--ease);
     }
     .wcard:hover .wcard-link{background:var(--navy);color:var(--cr2);transition:background var(--off) var(--ease),color var(--off) var(--ease)}
-    .wcard-thumb{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-bottom:1px solid var(--cr4)}
+    .wcard-phone{position:relative;width:60%;max-width:220px;margin:24px auto 8px;filter:drop-shadow(0 8px 24px rgba(0,0,0,.12))}
+    .wcard-frame{display:block;width:100%;height:auto;position:relative;z-index:1}
+    .wcard-screen{position:absolute;top:2.8%;left:6.5%;width:87%;height:94.4%;object-fit:cover;object-position:top center;z-index:2;border-radius:8%/4%}
+    .wcard-thumb{display:none}
 
     /* ──────────── SERVICES ──────────── */
     #services{background:var(--cr3)}
@@ -617,7 +620,7 @@
     <p class="wlead reveal">飲食・美容・塗装・中古車・整体など、業種を問わず対応。<br>すべてSEO対策・GA4計測つきで納品しています。</p>
     <div class="wgrid">
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/umi-ice/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1269.jpeg" alt="産み愛す LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1269.jpeg" alt="産み愛す LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">01</span><span class="wcard-tag">飲食・スイーツ</span></div>
           <div class="wcard-name">産み愛す / Umi-Ice</div>
@@ -627,7 +630,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/sofuren-umi/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1270.jpeg" alt="想夫恋 宇美店 LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1270.jpeg" alt="想夫恋 宇美店 LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">02</span><span class="wcard-tag">飲食・焼そば</span></div>
           <div class="wcard-name">想夫恋 宇美店</div>
@@ -637,7 +640,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://sofurenumi-glitch.github.io/sofuren-furikake/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1271.jpeg" alt="想夫恋 ふりかけLP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1271.jpeg" alt="想夫恋 ふりかけLP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">03</span><span class="wcard-tag">商品・EC</span></div>
           <div class="wcard-name">想夫恋 ふりかけLP</div>
@@ -647,7 +650,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/hanamaru/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1272.jpeg" alt="はなまる工房 LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1272.jpeg" alt="はなまる工房 LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">04</span><span class="wcard-tag">ギフト・手工芸</span></div>
           <div class="wcard-name">はなまる工房</div>
@@ -657,7 +660,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/kowa-tosou/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1273.jpeg" alt="興和塗装 LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1273.jpeg" alt="興和塗装 LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">05</span><span class="wcard-tag">建設・採用</span></div>
           <div class="wcard-name">興和塗装</div>
@@ -667,7 +670,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/makibo/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1274.jpeg" alt="MAKIBO LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1274.jpeg" alt="MAKIBO LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">06</span><span class="wcard-tag">アウトドア・販売</span></div>
           <div class="wcard-name">MAKIBO</div>
@@ -677,7 +680,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/torifuji/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1275.jpeg" alt="鶏富士 LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1275.jpeg" alt="鶏富士 LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">07</span><span class="wcard-tag">飲食・ランチ</span></div>
           <div class="wcard-name">鶏富士</div>
@@ -687,7 +690,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/sera/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1278.jpeg" alt="SERA LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1278.jpeg" alt="SERA LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">08</span><span class="wcard-tag">美容・サロン</span></div>
           <div class="wcard-name">SERA</div>
@@ -697,7 +700,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/chinen-chan/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1279.jpeg" alt="ちねんちゃん LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1279.jpeg" alt="ちねんちゃん LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">09</span><span class="wcard-tag">健康・整体</span></div>
           <div class="wcard-name">出張整体 ちねんちゃん</div>
@@ -707,7 +710,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/cars-fukuoka/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1280.jpeg" alt="CARS FUKUOKA LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1280.jpeg" alt="CARS FUKUOKA LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">10</span><span class="wcard-tag">中古車・販売</span></div>
           <div class="wcard-name">CARS FUKUOKA</div>
@@ -717,7 +720,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/hayashi/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1281.jpeg" alt="ハンバーグハヤシ LP" loading="lazy">
+        <div class="wcard-phone"><img class="wcard-frame" src="images/image-smartphone.png" alt="" loading="lazy"><img class="wcard-screen" src="images/img_1281.jpeg" alt="ハンバーグハヤシ LP" loading="lazy"></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">11</span><span class="wcard-tag">飲食・ハンバーグ</span></div>
           <div class="wcard-name">HAYASHI</div>
