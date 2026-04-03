@@ -265,7 +265,9 @@
       transition:background var(--on) var(--ease),color var(--on) var(--ease);
     }
     .wcard:hover .wcard-link{background:var(--navy);color:var(--cr2);transition:background var(--off) var(--ease),color var(--off) var(--ease)}
-    .wcard-thumb{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-bottom:1px solid var(--cr4)}
+    .wcard-thumb{display:none}
+    .wcard-phone{width:55%;max-width:180px;margin:20px auto 8px}
+    .wcard-phone canvas{display:block;width:100%;height:auto}
 
     /* ──────────── SERVICES ──────────── */
     #services{background:var(--cr3)}
@@ -617,7 +619,7 @@
     <p class="wlead reveal">飲食・美容・塗装・中古車・整体など、業種を問わず対応。<br>すべてSEO対策・GA4計測つきで納品しています。</p>
     <div class="wgrid">
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/umi-ice/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1269.jpeg" alt="産み愛す LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1269.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">01</span><span class="wcard-tag">飲食・スイーツ</span></div>
           <div class="wcard-name">産み愛す / Umi-Ice</div>
@@ -627,7 +629,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/sofuren-umi/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1270.jpeg" alt="想夫恋 宇美店 LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1270.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">02</span><span class="wcard-tag">飲食・焼そば</span></div>
           <div class="wcard-name">想夫恋 宇美店</div>
@@ -637,7 +639,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://sofurenumi-glitch.github.io/sofuren-furikake/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1271.jpeg" alt="想夫恋 ふりかけLP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1271.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">03</span><span class="wcard-tag">商品・EC</span></div>
           <div class="wcard-name">想夫恋 ふりかけLP</div>
@@ -647,7 +649,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/hanamaru/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1272.jpeg" alt="はなまる工房 LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1272.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">04</span><span class="wcard-tag">ギフト・手工芸</span></div>
           <div class="wcard-name">はなまる工房</div>
@@ -657,7 +659,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/kowa-tosou/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1273.jpeg" alt="興和塗装 LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1273.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">05</span><span class="wcard-tag">建設・採用</span></div>
           <div class="wcard-name">興和塗装</div>
@@ -667,7 +669,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/makibo/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1274.jpeg" alt="MAKIBO LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1274.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">06</span><span class="wcard-tag">アウトドア・販売</span></div>
           <div class="wcard-name">MAKIBO</div>
@@ -677,7 +679,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/torifuji/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1275.jpeg" alt="鶏富士 LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1275.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">07</span><span class="wcard-tag">飲食・ランチ</span></div>
           <div class="wcard-name">鶏富士</div>
@@ -687,7 +689,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/sera/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1278.jpeg" alt="SERA LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1278.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">08</span><span class="wcard-tag">美容・サロン</span></div>
           <div class="wcard-name">SERA</div>
@@ -697,7 +699,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/chinen-chan/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1279.jpeg" alt="ちねんちゃん LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1279.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">09</span><span class="wcard-tag">健康・整体</span></div>
           <div class="wcard-name">出張整体 ちねんちゃん</div>
@@ -707,7 +709,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/cars-fukuoka/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1280.jpeg" alt="CARS FUKUOKA LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1280.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">10</span><span class="wcard-tag">中古車・販売</span></div>
           <div class="wcard-name">CARS FUKUOKA</div>
@@ -717,7 +719,7 @@
         </div>
       </a>
       <a class="wcard reveal" href="https://fukuoka-connect.github.io/hayashi/" target="_blank" rel="noopener">
-        <img class="wcard-thumb" src="images/img_1281.jpeg" alt="ハンバーグハヤシ LP" loading="lazy">
+        <div class="wcard-phone"><canvas data-lp="images/IMG_1281.JPEG"></canvas></div>
         <div class="wcard-body">
           <div class="wcard-meta"><span class="wcard-num">11</span><span class="wcard-tag">飲食・ハンバーグ</span></div>
           <div class="wcard-name">HAYASHI</div>
@@ -925,6 +927,49 @@
   overlay.addEventListener('click',toggleDrawer);
   document.querySelectorAll('.drawer-link').forEach(a=>{a.addEventListener('click',()=>{if(drawer.classList.contains('open'))toggleDrawer();});});
 
+</script>
+<script>
+/* ── スマホモックアップ合成 ── */
+(function(){
+  var PHONE_SRC='images/image-smartphone.png';
+  var maskCached=null,greenBounds=null;
+  function loadImg(s){return new Promise(function(r,j){var i=new Image();i.onload=function(){r(i)};i.onerror=j;i.src=s})}
+  function preparePhone(){
+    return loadImg(PHONE_SRC).then(function(phone){
+      var w=phone.width,h=phone.height;
+      var tmp=document.createElement('canvas');tmp.width=w;tmp.height=h;
+      var ctx=tmp.getContext('2d');ctx.drawImage(phone,0,0);
+      var id=ctx.getImageData(0,0,w,h),d=id.data;
+      var x1=w,x2=0,y1=h,y2=0;
+      for(var y=0;y<h;y++)for(var x=0;x<w;x++){
+        var i=(y*w+x)*4;
+        if(d[i]<120&&d[i+1]>140&&d[i+2]<120){
+          d[i+3]=0;
+          if(x<x1)x1=x;if(x>x2)x2=x;if(y<y1)y1=y;if(y>y2)y2=y;
+        }
+      }
+      ctx.putImageData(id,0,0);
+      maskCached=tmp;greenBounds={x1:x1,x2:x2,y1:y1,y2:y2,w:x2-x1+1,h:y2-y1+1,fw:w,fh:h};
+    });
+  }
+  function composite(canvas,lpSrc){
+    return loadImg(lpSrc).then(function(lp){
+      var g=greenBounds,w=g.fw,h=g.fh;
+      canvas.width=w;canvas.height=h;
+      var ctx=canvas.getContext('2d');
+      var la=lp.width/lp.height,sa=g.w/g.h,sx,sy,sw,sh;
+      if(la>sa){sh=lp.height;sw=lp.height*sa;sx=(lp.width-sw)/2;sy=0}
+      else{sw=lp.width;sh=lp.width/sa;sx=0;sy=0}
+      ctx.drawImage(lp,sx,sy,sw,sh,g.x1,g.y1,g.w,g.h);
+      ctx.drawImage(maskCached,0,0);
+    });
+  }
+  preparePhone().then(function(){
+    var canvases=document.querySelectorAll('.wcard-phone canvas[data-lp]');
+    var p=Promise.resolve();
+    canvases.forEach(function(c){p=p.then(function(){return composite(c,c.dataset.lp)})});
+  });
+})();
 </script>
 </body>
 </html>
