@@ -27,6 +27,8 @@
   <meta name="twitter:title" content="FUKUOKA CONNECT｜AIで最短即日・届くLP制作">
   <meta name="twitter:description" content="最短即日、通常の半額以下。SEO込み・LINEレポートつきのLP制作代行。">
   <meta name="twitter:image" content="https://fukuoka-connect.github.io/ogp.jpg">
+  <link rel="icon" type="image/png" href="images/fc-icon.png">
+  <link rel="apple-touch-icon" href="images/fc-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -77,8 +79,10 @@
       border-bottom:1px solid var(--cr4);
       transition:background var(--off) var(--ease);
     }
-    .logo{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.1em;color:var(--navy);text-decoration:none}
-    .logo span{color:var(--mu)}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon{height:36px;width:auto}
+    .logo-text{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:1.3rem;letter-spacing:.1em;color:var(--navy);line-height:1.2}
+    .logo-text span{color:var(--mu)}
     nav{display:flex;gap:36px}
     nav a{font-size:.78rem;color:var(--mu);text-decoration:none;letter-spacing:.08em;position:relative;padding-bottom:2px;transition:color var(--on) var(--ease)}
     nav a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--navy);transition:width var(--on) var(--ease)}
@@ -508,7 +512,10 @@
 
 <!-- HEADER -->
 <header>
-  <a href="#" class="logo">FUKUOKA <span>CONNECT</span></a>
+  <a href="#" class="logo">
+    <img src="images/fc-icon.png" alt="FUKUOKA CONNECT" class="logo-icon" width="36" height="36">
+    <span class="logo-text">FUKUOKA <span>CONNECT</span></span>
+  </a>
   <nav>
     <a href="#solution">サービス</a>
     <a href="#works">実績</a>
@@ -874,7 +881,7 @@
   <div class="fti">
     <div class="fttop">
       <div class="ftbrand">
-        <div class="ftlogo">FUKUOKA <span>CONNECT</span></div>
+        <div class="ftlogo"><img src="images/fc-icon.png" alt="" width="28" height="28" style="vertical-align:middle;margin-right:8px;border-radius:4px">FUKUOKA <span>CONNECT</span></div>
         <p class="ftag">AIを活用して中小企業・個人事業主のビジネスを加速させる、LP制作・運用代行サービス。福岡・宇美町から全国へ。</p>
       </div>
       <div class="ftnav">
