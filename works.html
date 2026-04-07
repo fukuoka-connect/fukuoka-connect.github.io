@@ -146,6 +146,8 @@
     .wk-card:hover{background:var(--cr2);transform:translateY(-3px);transition:background var(--off) var(--ease),transform var(--off) var(--ease)}
     .wk-card.hidden{display:none}
     .wk-card-bar{height:3px;width:100%;flex-shrink:0}
+    .wk-card-phone{width:55%;max-width:180px;margin:20px auto 8px}
+    .wk-card-phone canvas{display:block;width:100%;height:auto}
     .wk-card-body{padding:22px 24px 20px;display:flex;flex-direction:column;flex:1}
     .wk-card-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px}
     .wk-card-num{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:1.1rem;color:var(--mu2);line-height:1}
@@ -330,6 +332,7 @@
 
     <a class="wk-card reveal" href="https://fukuoka-connect.github.io/fc-sample-eyelash/" target="_blank" rel="noopener" data-category="美容">
       <div class="wk-card-bar" style="background:#C27B8E"></div>
+      <div class="wk-card-phone"><canvas data-lp="images/bloom.jpeg"></canvas></div>
       <div class="wk-card-body">
         <div class="wk-card-meta">
           <span class="wk-card-num">01</span>
@@ -343,6 +346,7 @@
 
     <a class="wk-card reveal" href="https://fukuoka-connect.github.io/fc-sample-seitai/" target="_blank" rel="noopener" data-category="治療院・整体">
       <div class="wk-card-bar" style="background:#44B07A"></div>
+      <div class="wk-card-phone"><canvas data-lp="images/seitai.jpeg"></canvas></div>
       <div class="wk-card-body">
         <div class="wk-card-meta">
           <span class="wk-card-num">02</span>
@@ -356,6 +360,7 @@
 
     <a class="wk-card reveal" href="https://fukuoka-connect.github.io/patisserie-fc/" target="_blank" rel="noopener" data-category="飲食">
       <div class="wk-card-bar" style="background:#D4A49A"></div>
+      <div class="wk-card-phone"><canvas data-lp="images/patisserie-fc-ss.jpeg"></canvas></div>
       <div class="wk-card-body">
         <div class="wk-card-meta">
           <span class="wk-card-num">03</span>
@@ -450,6 +455,49 @@
   hbtn.addEventListener('click',toggleDrawer);
   overlay.addEventListener('click',toggleDrawer);
   document.querySelectorAll('.drawer-link').forEach(function(a){a.addEventListener('click',function(){if(drawer.classList.contains('open'))toggleDrawer();});});
+</script>
+<script>
+/* ── スマホモックアップ合成 ── */
+(function(){
+  var PHONE_SRC='images/image-smartphone.png';
+  var maskCached=null,greenBounds=null;
+  function loadImg(s){return new Promise(function(r,j){var i=new Image();i.onload=function(){r(i)};i.onerror=j;i.src=s})}
+  function preparePhone(){
+    return loadImg(PHONE_SRC).then(function(phone){
+      var w=phone.width,h=phone.height;
+      var tmp=document.createElement('canvas');tmp.width=w;tmp.height=h;
+      var ctx=tmp.getContext('2d');ctx.drawImage(phone,0,0);
+      var id=ctx.getImageData(0,0,w,h),d=id.data;
+      var x1=w,x2=0,y1=h,y2=0;
+      for(var y=0;y<h;y++)for(var x=0;x<w;x++){
+        var i=(y*w+x)*4;
+        if(d[i]<120&&d[i+1]>140&&d[i+2]<120){
+          d[i+3]=0;
+          if(x<x1)x1=x;if(x>x2)x2=x;if(y<y1)y1=y;if(y>y2)y2=y;
+        }
+      }
+      ctx.putImageData(id,0,0);
+      maskCached=tmp;greenBounds={x1:x1,x2:x2,y1:y1,y2:y2,w:x2-x1+1,h:y2-y1+1,fw:w,fh:h};
+    });
+  }
+  function composite(canvas,lpSrc){
+    return loadImg(lpSrc).then(function(lp){
+      var g=greenBounds,w=g.fw,h=g.fh;
+      canvas.width=w;canvas.height=h;
+      var ctx=canvas.getContext('2d');
+      var la=lp.width/lp.height,sa=g.w/g.h,sx,sy,sw,sh;
+      if(la>sa){sh=lp.height;sw=lp.height*sa;sx=(lp.width-sw)/2;sy=0}
+      else{sw=lp.width;sh=lp.width/sa;sx=0;sy=0}
+      ctx.drawImage(lp,sx,sy,sw,sh,g.x1,g.y1,g.w,g.h);
+      ctx.drawImage(maskCached,0,0);
+    });
+  }
+  preparePhone().then(function(){
+    var canvases=document.querySelectorAll('.wk-card-phone canvas[data-lp]');
+    var p=Promise.resolve();
+    canvases.forEach(function(c){p=p.then(function(){return composite(c,c.dataset.lp)})});
+  });
+})();
 </script>
 </body>
 </html>
