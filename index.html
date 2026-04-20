@@ -32,7 +32,78 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"FUKUOKA CONNECT","description":"AIを活用した高品質LP制作代行サービス。最短即日納品、SEO対策・GA4レポート込み。","url":"https://fukuoka-connect.github.io/","areaServed":"福岡県","serviceType":"ランディングページ制作・Webマーケティング支援"}</script>
+  <!-- JSON-LD: Organization + Person エンティティグラフ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://fukuoka-connect.github.io/#organization",
+        "name":"FUKUOKA CONNECT",
+        "alternateName":["フクオカコネクト","FUKUOKA CONNECT（フクオカコネクト）"],
+        "url":"https://fukuoka-connect.github.io/",
+        "logo":"https://fukuoka-connect.github.io/images/fc-icon.png",
+        "image":"https://fukuoka-connect.github.io/ogp.jpg",
+        "description":"福岡県糟屋郡宇美町を拠点に、AIを活用したLP制作・SEO・GA4分析・LINE運用を提供するWebマーケティング事業。福岡・糟屋エリアの中小企業と個人事業主の『届くLP』を最短即日で設計する。",
+        "foundingDate":"2025",
+        "areaServed":[
+          {"@type":"AdministrativeArea","name":"福岡県糟屋郡宇美町"},
+          {"@type":"AdministrativeArea","name":"福岡県糟屋郡"},
+          {"@type":"AdministrativeArea","name":"福岡県"}
+        ],
+        "address":{
+          "@type":"PostalAddress",
+          "addressCountry":"JP",
+          "addressRegion":"福岡県",
+          "addressLocality":"糟屋郡宇美町"
+        },
+        "founder":{"@id":"https://fukuoka-connect.github.io/about.html#kentaro-goto"},
+        "employee":{"@id":"https://fukuoka-connect.github.io/about.html#kentaro-goto"},
+        "knowsAbout":["ランディングページ制作","LP制作","SEO","GA4アクセス解析","LINE運用","AI活用Webマーケティング","中小企業支援","地域ビジネス"],
+        "slogan":"届くことが、すべての起点。",
+        "sameAs":[
+          "https://www.instagram.com/fukuoka_connect092/",
+          "https://github.com/fukuoka-connect",
+          "https://www.facebook.com/ken510",
+          "https://note.com/goto_yakisoba"
+        ]
+      },
+      {
+        "@type":"Person",
+        "@id":"https://fukuoka-connect.github.io/about.html#kentaro-goto",
+        "name":"後藤 堅太郎",
+        "alternateName":["後藤堅太郎","ごとう けんたろう","Kentaro Goto","Goto Kentaro"],
+        "givenName":"堅太郎",
+        "familyName":"後藤",
+        "image":"https://fukuoka-connect.github.io/images/kentaro.jpeg",
+        "jobTitle":"FUKUOKA CONNECT 代表 / Webマーケティングディレクター",
+        "description":"福岡県糟屋郡宇美町を拠点とするFUKUOKA CONNECTの代表。AIを活用したLP制作・SEO・GA4分析・LINE運用を通じて、福岡・糟屋エリアの中小企業と個人事業主のオンライン集客を支援している。家業の飲食店『想夫恋 宇美店』のオーナーとしての現場経験を、LP設計の核に据えている。",
+        "worksFor":{"@id":"https://fukuoka-connect.github.io/#organization"},
+        "url":"https://fukuoka-connect.github.io/about.html",
+        "mainEntityOfPage":"https://fukuoka-connect.github.io/about.html",
+        "sameAs":[
+          "https://www.facebook.com/ken510",
+          "https://www.instagram.com/fukuoka_connect092/",
+          "https://github.com/fukuoka-connect",
+          "https://note.com/goto_yakisoba"
+        ]
+      },
+      {
+        "@type":"ProfessionalService",
+        "@id":"https://fukuoka-connect.github.io/#service",
+        "name":"FUKUOKA CONNECT — AI活用LP制作サービス",
+        "provider":{"@id":"https://fukuoka-connect.github.io/#organization"},
+        "areaServed":[
+          {"@type":"AdministrativeArea","name":"福岡県糟屋郡"},
+          {"@type":"AdministrativeArea","name":"福岡県"}
+        ],
+        "serviceType":"ランディングページ制作・SEO・GA4分析・LINE運用",
+        "description":"AIを活用した高品質LP制作代行。最短即日納品、SEO対策・GA4レポート込み、月額制運用対応。"
+      }
+    ]
+  }
+  </script>
 
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -516,7 +587,7 @@
     <a href="#solution">サービス</a>
     <a href="#works">実績</a>
     <a href="#strength">強み</a>
-    <a href="#services">料金</a>
+    <a href="about.html">運営者</a>
     <a href="#faq">FAQ</a>
   </nav>
   <a href="#cta" class="hcta">無料相談する</a>
@@ -527,7 +598,7 @@
   <a href="#solution" class="drawer-link">サービス</a>
   <a href="#works" class="drawer-link">実績</a>
   <a href="#strength" class="drawer-link">強み</a>
-  <a href="#services" class="drawer-link">料金</a>
+  <a href="about.html" class="drawer-link">運営者情報</a>
   <a href="#faq" class="drawer-link">FAQ</a>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkxMga9FQyM55r__FXsOk4HN5A8_azqJfCRMMx-gbo0mea9g/viewform" target="_blank" rel="noopener noreferrer" class="drawer-cta">無料相談する</a>
 </div>
@@ -855,7 +926,7 @@
       </div>
       <div class="ftnav">
         <div class="ftnc"><h4>SERVICE</h4><a href="#solution">サービス概要</a><a href="#services">料金プラン</a><a href="#flow">制作の流れ</a><a href="works.html">制作サンプル一覧</a></div>
-        <div class="ftnc"><h4>ABOUT</h4><a href="#strength">選ばれる理由</a><a href="#owner">オーナー紹介</a><a href="#testimonials">お客様の声</a></div>
+        <div class="ftnc"><h4>ABOUT</h4><a href="about.html">運営者情報</a><a href="#strength">選ばれる理由</a><a href="#testimonials">お客様の声</a></div>
         <div class="ftnc"><h4>CONTACT</h4><a href="#cta">無料相談フォーム</a><a href="#faq">よくある質問</a></div>
       </div>
     </div>
