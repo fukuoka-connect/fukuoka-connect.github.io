@@ -398,6 +398,41 @@
     .wcard-phone{width:55%;max-width:180px;margin:20px auto 8px}
     .wcard-phone canvas{display:block;width:100%;height:auto}
 
+    /* ──────────── DOCK（LP人間ドック導線） ──────────── */
+    #dock{background:var(--cr2);border-top:1px solid var(--cr4);border-bottom:1px solid var(--cr4)}
+    .dock-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center;margin-top:40px}
+    .dock-vis{position:relative;border:1px solid var(--cr4);background:var(--cr);padding:36px 28px;border-radius:2px}
+    .dock-vis::before{content:'CHECK SHEET';position:absolute;top:-10px;left:24px;background:var(--cr2);padding:0 10px;font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.22em;color:var(--navy)}
+    .dock-row{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px dashed var(--cr4);font-size:.92rem;color:var(--tx)}
+    .dock-row:last-child{border-bottom:none}
+    .dock-row .dchk{flex:0 0 22px;width:22px;height:22px;border:1.5px solid var(--navy);display:inline-flex;align-items:center;justify-content:center;color:var(--navy);font-weight:700;font-size:.85rem;line-height:1}
+    .dock-row .dq{flex:1}
+    .dock-row .dscore{font-family:'Shippori Mincho',serif;font-weight:700;color:var(--navy);font-size:.95rem;letter-spacing:.04em}
+    .dock-vis-foot{margin-top:20px;padding-top:16px;border-top:1px solid var(--cr4);display:flex;justify-content:space-between;align-items:baseline}
+    .dock-vis-foot .dvf-label{font-size:.72rem;letter-spacing:.18em;color:var(--mu);font-weight:700}
+    .dock-vis-foot .dvf-num{font-family:'Shippori Mincho',serif;font-weight:700;color:var(--navy);font-size:1.6rem}
+    .dock-body h2.sh2{margin-bottom:20px}
+    .dock-lead{font-size:1.02rem;color:var(--tx);margin-bottom:24px;line-height:1.9}
+    .dock-points{margin:24px 0 28px;padding:0;list-style:none}
+    .dock-points li{position:relative;padding:10px 0 10px 28px;font-size:.95rem;color:var(--tx);border-bottom:1px solid var(--cr4)}
+    .dock-points li::before{content:'';position:absolute;left:0;top:18px;width:14px;height:1px;background:var(--navy)}
+    .dock-price{display:inline-flex;align-items:baseline;gap:10px;margin:8px 0 28px;padding:10px 18px;background:var(--cr3);border-left:3px solid var(--navy)}
+    .dock-price .dp-from{font-size:.78rem;color:var(--mu);letter-spacing:.1em}
+    .dock-price .dp-num{font-family:'Shippori Mincho',serif;font-weight:700;color:var(--navy);font-size:1.7rem;line-height:1}
+    .dock-price .dp-yen{font-size:.95rem;color:var(--navy);font-weight:700}
+    .dock-price .dp-tail{font-size:.78rem;color:var(--mu);letter-spacing:.08em}
+    .dock-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    .dock-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;background:var(--navy);color:var(--cr2);font-weight:700;font-size:.92rem;letter-spacing:.06em;text-decoration:none;border:1px solid var(--navy);transition:background var(--on) var(--ease),color var(--on) var(--ease)}
+    .dock-btn:hover{background:var(--navy2)}
+    .dock-btn .arr{font-size:.85rem}
+    .dock-btn-sub{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border:1px solid var(--cr4);color:var(--navy);font-size:.86rem;font-weight:700;letter-spacing:.04em;text-decoration:none;transition:border-color var(--on) var(--ease),background var(--on) var(--ease)}
+    .dock-btn-sub:hover{border-color:var(--navy);background:var(--cr3)}
+    .dock-note{margin-top:14px;font-size:.78rem;color:var(--mu);letter-spacing:.04em}
+    @media(max-width:880px){
+      .dock-wrap{grid-template-columns:1fr;gap:36px}
+      .dock-vis{padding:32px 22px}
+    }
+
     /* ──────────── SERVICES ──────────── */
     #services{background:var(--cr3)}
     .swtable{margin-top:60px;overflow-x:auto}
@@ -650,6 +685,7 @@
     <a href="#solution">サービス</a>
     <a href="#works">実績</a>
     <a href="#strength">強み</a>
+    <a href="#dock">LP人間ドック</a>
     <a href="about.html">運営者</a>
     <a href="#faq">FAQ</a>
   </nav>
@@ -662,6 +698,7 @@
   <a href="#solution" class="drawer-link">サービス</a>
   <a href="#works" class="drawer-link">実績</a>
   <a href="#strength" class="drawer-link">強み</a>
+  <a href="#dock" class="drawer-link">LP人間ドック</a>
   <a href="about.html" class="drawer-link">運営者情報</a>
   <a href="#faq" class="drawer-link">FAQ</a>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkxMga9FQyM55r__FXsOk4HN5A8_azqJfCRMMx-gbo0mea9g/viewform" target="_blank" rel="noopener noreferrer" class="drawer-cta">無料相談する</a>
@@ -888,6 +925,49 @@
   </div>
 </section>
 
+<!-- DOCK（LP人間ドック導線） -->
+<section id="dock">
+  <div class="si2">
+    <span class="slabel reveal">RELATED SERVICE</span>
+    <h2 class="sh2 reveal">あなた<span class="sm">の</span>LP<span class="sm">、</span><br><span class="marker">健康</span><span class="sm">で</span>すか<span class="sm">？</span></h2>
+    <p class="dock-lead reveal" style="margin-top:20px">「公開したのに問い合わせが来ない」「直帰率が高い気がする」——そんなLPの不調、まずは<strong>無料セルフチェック</strong>で診てみませんか。<br>10問の問診に答えるだけで、あなたのLPの“健康スコア”と改善ポイントが分かります。</p>
+
+    <div class="dock-wrap">
+      <!-- 左：問診票風ビジュアル -->
+      <div class="dock-vis reveal">
+        <div class="dock-row"><span class="dchk">✓</span><span class="dq">ファーストビューで価値が3秒で伝わる</span><span class="dscore">10/10</span></div>
+        <div class="dock-row"><span class="dchk">✓</span><span class="dq">ターゲットが明確に書かれている</span><span class="dscore">8/10</span></div>
+        <div class="dock-row"><span class="dchk" style="border-color:#c7a96b;color:#c7a96b">!</span><span class="dq">CTAが1つに絞られている</span><span class="dscore" style="color:#c7a96b">5/10</span></div>
+        <div class="dock-row"><span class="dchk">✓</span><span class="dq">スマホでの可読性が高い</span><span class="dscore">9/10</span></div>
+        <div class="dock-row"><span class="dchk" style="border-color:#c7a96b;color:#c7a96b">!</span><span class="dq">不安・反論への先回りがある</span><span class="dscore" style="color:#c7a96b">4/10</span></div>
+        <div class="dock-vis-foot">
+          <span class="dvf-label">TOTAL SCORE</span>
+          <span><span class="dvf-num">72</span><span style="color:var(--mu);font-size:.85rem">/100</span></span>
+        </div>
+      </div>
+
+      <!-- 右：説明とCTA -->
+      <div class="dock-body">
+        <ul class="dock-points reveal">
+          <li>10問の問診で、LPの<strong>5つの観点</strong>を採点</li>
+          <li>あなたのLPの<strong>“弱点”</strong>と<strong>改善優先度</strong>が即わかる</li>
+          <li>無料診断後、<strong>本格診断レポート</strong>もご用意（5,500円〜）</li>
+        </ul>
+        <div class="dock-price reveal">
+          <span class="dp-from">本格診断レポート</span>
+          <span class="dp-num">5,500</span><span class="dp-yen">円</span>
+          <span class="dp-tail">〜（税込）</span>
+        </div>
+        <div class="dock-ctas reveal">
+          <a href="https://fukuoka-connect.github.io/lp-dock/" target="_blank" class="dock-btn">▶ 無料セルフチェックを試す<span class="arr">↗</span></a>
+          <a href="https://fukuoka-connect.github.io/lp-dock/" target="_blank" class="dock-btn-sub">サービス詳細を見る<span class="arr">↗</span></a>
+        </div>
+        <p class="dock-note reveal">※ 別サイト（LP人間ドック｜福岡）が新しいタブで開きます／FUKUOKA CONNECT運営</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="si2">
@@ -1009,7 +1089,7 @@
         <p class="ftag">AIを活用して中小企業・個人事業主のビジネスを加速させる、LP制作・運用代行サービス。福岡・宇美町から全国へ。</p>
       </div>
       <div class="ftnav">
-        <div class="ftnc"><h4>SERVICE</h4><a href="#solution">サービス概要</a><a href="#services">料金プラン</a><a href="#flow">制作の流れ</a><a href="works.html">制作サンプル一覧</a></div>
+        <div class="ftnc"><h4>SERVICE</h4><a href="#solution">サービス概要</a><a href="#services">料金プラン</a><a href="#flow">制作の流れ</a><a href="works.html">制作サンプル一覧</a><a href="https://fukuoka-connect.github.io/lp-dock/" target="_blank">LP人間ドック↗</a></div>
         <div class="ftnc"><h4>ABOUT</h4><a href="about.html">運営者情報</a><a href="#strength">選ばれる理由</a><a href="#testimonials">お客様の声</a></div>
         <div class="ftnc"><h4>CONTACT</h4><a href="#cta">無料相談フォーム</a><a href="#faq">よくある質問</a></div>
       </div>
